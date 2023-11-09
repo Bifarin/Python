@@ -1,0 +1,7 @@
+# Checking for duplicates
+duplicates = c[c.duplicated()]
+if len(duplicates) > 0:
+    print("Duplicates found:")
+    print(duplicates)
+else:
+    print("No duplicates")
