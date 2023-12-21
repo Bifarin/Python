@@ -1,2 +1,8 @@
-# in cmd
+# in normal cmdprompt | this will not be accessible by Anaconda Jupyter lab
 pip3 install xeus-python notebook
+
+# for list of kernel in cmd
+jupyter kernelspec list
+
+# for the xeus to be accessible in anacpnda, insteall it in the anaconda prompt
+
