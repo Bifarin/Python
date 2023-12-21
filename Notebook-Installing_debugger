@@ -5,4 +5,10 @@ pip3 install xeus-python notebook
 jupyter kernelspec list
 
 # for the xeus to be accessible in anacpnda, insteall it in the anaconda prompt
+conda info --envs #shows list of environment
+
+conda install xeus-python -c conda-forge
+conda install -c conda-forge jupyterlab
+
+
 
