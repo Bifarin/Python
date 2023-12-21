@@ -1,0 +1,1 @@
+!conda list > conda_packages.txt
