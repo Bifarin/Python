@@ -1,0 +1,64 @@
+# for partitioning csv
+# run with control shift
+import pandas as pd
+from functions import change_directory
+
+new_directory = "C:/Users/obifar01/Desktop/Paragon Tutorial"
+change_directory(new_directory)
+
+df = pd.read_csv("raw_covid-survey_csv_responses-2023-12-18_W186-W192.csv")
+
+def show_basic_statistics(dataframe, column_name):
+    column = dataframe[column_name]
+
+    print(f"Basic Statistics for '{column_name}':")
+    # print("Mean:", column.mean())
+    print("Median:", column.median())
+    # print("Mode:", column.mode().to_list())
+    # print("Minimum:", column.min())
+    # print("Maximum:", column.max())
+    # print("Standard Deviation:", column.std())
+    print("Variance:", column.var())
+    # print("Count:", column.count())
+    print("Null Count:", column.isnull().sum())
+    print("\n")
+
+
+
+# ========================================================================================================================================================
+# Specify the field/column for which you want to calculate statistics
+for col in ['SC11Br1','SC11Br2']:
+    # Check if the specified field exists in the DataFrame
+    if col in df.columns:
+        # Calculate basic statistics
+        field_stats = df[col].describe()
+        
+        # Print the statistics
+        print(f"Describe statistics for '{col}':")
+        print(field_stats)
+        show_basic_statistics(df, col)
+        
+    else:
+        print(f"Field '{col}' not found in the DataFrame.")
+
+
+
+
+for col in ['SC11Br1', 'SC11Br2']:
+    # Check if the specified field exists in the DataFrame
+    if col in df.columns:
+        non_zero_values = df.loc[df[col] != 0, col]
+
+        # Check if there are non-zero values before calculating statistics
+        if not non_zero_values.empty:
+            non_zero_stats = non_zero_values.describe()
+
+            # Print the statistics for non-zero values
+            print(f"Describe statistics for non-zero values of '{col}':")
+            print(non_zero_stats)
+            print("\n")
+        else:
+            print(f"No non-zero values found for '{col}'.")
+    else:
+        print(f"Field '{col}' not found in the DataFrame.")
+
