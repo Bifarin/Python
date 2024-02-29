@@ -1,1 +1,4 @@
+//However, note that the ! is a shell-specific command used in Jupyter notebooks or similar
+//environments to execute shell commands. In a regular command prompt, you should omit the !
+
 !conda list > conda_packages.txt
