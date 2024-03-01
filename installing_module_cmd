@@ -1,0 +1,5 @@
+C:/Users/obifar01/AppData/Local/Programs/Python/Python311/python.exe -m pip install nltk
+
+
+//for multiple
+C:/Users/obifar01/AppData/Local/Programs/Python/Python311/python.exe -m pip install nltk, seaborn, pandas
