@@ -1,0 +1,9 @@
+install a python locally that the venv will mirror with the right version you want for your venv
+
+  Below is the location where I want to install the venv
+  C:\Users\obifar01\OneDrive - dentsu\project_Req-Meeting\Presentations-OneNotes&Others\240318_parental_leave_handing_over\SAV-Migration
+
+  C:\Users\obifar01\AppData\Local\Programs\Python\Python38\python.exe
+
+  in VScode, open the folder where you want the venv folder to reside. run the below in the terminal
+  C:\Users\obifar01\AppData\Local\Programs\Python\Python38\python.exe -m venv venv-sav_test
