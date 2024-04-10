@@ -3,3 +3,7 @@ C:/Users/obifar01/AppData/Local/Programs/Python/Python311/python.exe -m pip inst
 
 //for multiple
 C:/Users/obifar01/AppData/Local/Programs/Python/Python311/python.exe -m pip install nltk, seaborn, pandas
+
+
+// for multiple module in a txt
+C:/Users/obifar01/AppData/Local/Programs/Python/Python311/python.exe -m pip install -r requirement.txt
