@@ -1,0 +1,34 @@
+def get_script_directory():
+    ''''
+    returns directory of script
+    '''
+    # Get the path of the current script
+    script_path = os.path.abspath(__file__)
+    
+    # Get the base directory by removing the script filename
+    base_directory = os.path.dirname(script_path)
+    
+    return base_directory
+
+========================================================================================================================================================
+
+import os
+def location(relative_location):
+    ''''
+    get working directory and join with other string (argument)
+    '''
+    current_directory = os.getcwd()
+    file_path = os.path.join(current_directory, relative_location)
+    return file_path
+
+
+========================================================================================================================================================
+
+
+// navigate back by one step
+os.path.dirname(script_path)
+
+
+========================================================================================================================================================
+// \ as a distinct behavior in os.path
+// use \\ to seperate folder level as \ character removes the next character in a given string
