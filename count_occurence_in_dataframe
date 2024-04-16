@@ -1,0 +1,6 @@
+// count all occurence
+df[column].value_counts()
+
+
+// count a specify instance
+  count = (df[column] == "Null").sum()
