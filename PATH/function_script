@@ -1,0 +1,37 @@
+import os
+import pandas as pd
+
+
+
+def change_directory(new_directory):
+    try:
+        # Change the current working directory
+        os.chdir(new_directory)
+        print("Successfully changed the current working directory to:", os.getcwd())
+    except FileNotFoundError:
+        print("The specified directory does not exist.")
+    except OSError as e:
+        print(f"An error occurred while changing the directory: {e}")
+
+
+def get_working_directory_and_move_to_relative_location(relative_location):
+    ''''
+    get working directory
+    '''
+    current_directory = os.getcwd()
+    file_path = os.path.join(current_directory, relative_location)
+    return file_path
+
+
+
+def get_script_directory():
+    ''''
+    returns directory of script
+    '''
+    # Get the path of the current script
+    script_path = os.path.abspath(__file__)
+    
+    # Get the base directory by removing the script filename
+    base_directory = os.path.dirname(script_path)
+    
+    return base_directory
