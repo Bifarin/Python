@@ -1,0 +1,3 @@
+from datetime import date
+date = date.today().strftime('%Y-%m-%d')
+df.to_csv(filepath + 'raw_covid-survey_csv_responses-' + date + '.csv', index=False)
