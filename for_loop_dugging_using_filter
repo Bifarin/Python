@@ -1,0 +1,5 @@
+for team_url in (team_url_filter for team_url_filter in team_urls if team_url_filter == "https://fbref.com/en/squads/fd962109/Fulham-Stats"):
+
+# is used instead of
+
+for team_url in team_urls:
